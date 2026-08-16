@@ -1,154 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hexwick — Gizlilik Politikası / Privacy Policy</title>
+<title>Gizlilik Politikası — Hexwick</title>
+<meta name="description" content="Hexwick oyununun gizlilik politikası: hangi bilgiler toplanır, neden toplanır ve nasıl sildirilir.">
 <style>
-  :root { color-scheme: light dark; }
-  body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 5rem;
-         font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  h1 { font-size: 1.6rem; margin-bottom: .2rem; }
-  h2 { font-size: 1.15rem; margin-top: 2.2rem; border-bottom: 1px solid #8883; padding-bottom: .3rem; }
-  h3 { font-size: 1rem; margin-top: 1.4rem; }
-  .tarih { opacity: .7; font-size: .9rem; }
-  .kutu { border: 1px solid #8884; border-radius: 8px; padding: .9rem 1.1rem; margin: 1.2rem 0; }
-  .ozet { font-weight: 600; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
-  th, td { border: 1px solid #8884; padding: .45rem .6rem; text-align: left; vertical-align: top; }
-  code { background: #8882; padding: .1rem .3rem; border-radius: 4px; }
-  hr { border: 0; border-top: 1px solid #8883; margin: 3rem 0; }
-  .dil { font-size: .9rem; opacity: .8; }
+  :root {
+    --zemin:      #f7f5f0;
+    --kart:       #ffffff;
+    --yazi:       #2b2a26;
+    --soluk:      #6a675e;
+    --cizgi:      #e3ded2;
+    --vurgu:      #7a5cc4;
+    --uyari-zemin:#f3eeff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --zemin:      #17161c;
+      --kart:       #201f28;
+      --yazi:       #ece9f2;
+      --soluk:      #a5a1b0;
+      --cizgi:      #322f3d;
+      --vurgu:      #b3a0ee;
+      --uyari-zemin:#272235;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 72px;
+    background: var(--zemin);
+    color: var(--yazi);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header {
+    background: var(--kart);
+    border: 1px solid var(--cizgi);
+    border-radius: 14px;
+    padding: 26px 26px 22px;
+    margin-bottom: 28px;
+  }
+  h1 { font-size: 1.6rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .oyun { color: var(--vurgu); font-weight: 700; }
+  .tarih { color: var(--soluk); font-size: 0.9rem; margin: 0; }
+  .diller { margin: 18px 0 0; font-size: 0.9rem; }
+  .diller a { color: var(--vurgu); }
+  h2 {
+    font-size: 1.08rem;
+    margin: 34px 0 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--cizgi);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  h3 { font-size: 0.95rem; margin: 20px 0 6px; color: var(--soluk);
+       text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  strong { font-weight: 650; }
+  a { color: var(--vurgu); }
+  .kutu {
+    background: var(--uyari-zemin);
+    border: 1px solid var(--cizgi);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 16px 0 20px;
+  }
+  .kutu p:last-child { margin-bottom: 0; }
+  .mail {
+    display: inline-block;
+    font-weight: 650;
+    word-break: break-all;
+  }
+  footer {
+    margin-top: 44px;
+    padding-top: 18px;
+    border-top: 1px solid var(--cizgi);
+    color: var(--soluk);
+    font-size: 0.86rem;
+  }
+  section[lang="en"] { margin-top: 56px; }
 </style>
 </head>
 <body>
+<main>
 
-<p class="dil"><a href="#tr">Türkçe</a> · <a href="#en">English</a></p>
+  <header>
+    <h1>Gizlilik Politikası — <span class="oyun">Hexwick</span></h1>
+    <p class="tarih">Son güncelleme: 16 Ağustos 2026</p>
+    <p class="diller"><a href="#en">English version below ↓</a></p>
+  </header>
 
-<h1 id="tr">Hexwick — Gizlilik Politikası</h1>
-<p class="tarih">Son güncelleme: 10 Ağustos 2026 · Uygulama: Hexwick (<code>com.hexwick.game</code>)</p>
+  <p>Hexwick'i oynarken hangi bilgilerin toplandığını, neden toplandığını ve
+  nasıl sildirebileceğinizi bu sayfa anlatır.</p>
 
-<div class="kutu">
-  <p class="ozet">Kısa özet: Hexwick hiçbir kişisel veri toplamaz, saklamaz veya
-  paylaşmaz. Hesap açmanız gerekmez. Oyun ilerlemeniz yalnızca kendi
-  cihazınızda tutulur.</p>
-</div>
+  <h2>1) Neleri topluyoruz</h2>
 
-<h2>1. Toplanan veriler</h2>
-<p><strong>Hiçbir kişisel veri toplanmıyor.</strong> Uygulama şunların hiçbirini
-okumaz, saklamaz veya iletmez: ad, e-posta, telefon numarası, konum, kişiler,
-fotoğraflar, cihaz kimliği, reklam kimliği (GAID/IDFA), kamera, mikrofon.</p>
-<p>Uygulamada hesap oluşturma, giriş yapma veya metin girme alanı yoktur.</p>
+  <h3>Oyunu açan herkes için</h3>
+  <ul>
+    <li><strong>Oyuncu adı</strong> — ilk açılışta otomatik atanır
+        (örn. <code>username0160699284</code>). İsterseniz değiştirebilirsiniz.
+        Liderlik tablosunda bu ad görünür.</li>
+    <li><strong>Oyun ilerlemesi</strong> — açılan bölümler, bölüm rekorları</li>
+    <li><strong>Oyun içi para ve eşyalar</strong> — altın, taş, envanter,
+        kuşanılan ekipman, kostümler, sandıklar</li>
+    <li><strong>Oyun istatistikleri</strong> — öldürülen canavar ve boss sayısı,
+        ölüm sayısı, oynanan tur ve süre</li>
+    <li><strong>Enerji ve günlük sayaçlar</strong></li>
+    <li><strong>Kabus Modu</strong> turlarının süresi ve o turda kuşanılan
+        ekipman</li>
+    <li><strong>Cihazınızı tanımak için ürettiğimiz rastgele bir jeton</strong></li>
+  </ul>
 
-<h2>2. Cihazınızda saklananlar</h2>
-<p>Oyun, ilerlemenizi cihazınızın uygulamaya ayrılmış özel alanına yazar. Bu
-veriler <strong>cihazdan dışarı çıkmaz</strong> ve uygulamayı sildiğinizde
-birlikte silinir.</p>
-<table>
-  <tr><th>Saklanan</th><th>Örnek</th></tr>
-  <tr><td>Oyun ilerlemesi</td><td>açılan bölüm, bölüm rekorları</td></tr>
-  <tr><td>Oyun içi kaynaklar</td><td>altın, taş, enerji</td></tr>
-  <tr><td>Envanter</td><td>ekipman, sandıklar, kuşanılan eşyalar</td></tr>
-  <tr><td>Kozmetikler</td><td>sahip olunan ve seçili kostüm</td></tr>
-  <tr><td>Ayarlar</td><td>ses açık/kapalı</td></tr>
-</table>
+  <h3>“Hesabı Bağla” derseniz ek olarak</h3>
+  <ul>
+    <li><strong>Google Play Games oyuncu kimliğiniz</strong></li>
+  </ul>
 
-<h2>3. İnternet bağlantısı</h2>
-<p>Uygulama <code>INTERNET</code> iznini kullanır. Bu izin <strong>yalnızca iki
-iş</strong> için var:</p>
-<ol>
-  <li><strong>Bağlantı denetimi.</strong> Mağaza bölümü ve reklam ödülleri
-      internet gerektirir; uygulama bağlantı olup olmadığını anlamak için
-      içeriği boş bir adrese istek atar.</li>
-  <li><strong>Güncelleme denetimi.</strong> Yeni bir sürüm çıktığında sizi
-      bilgilendirmek için sürüm bilgisini okur.</li>
-</ol>
-<p>Bu isteklerde <strong>size ait hiçbir bilgi gönderilmez</strong> — kimlik,
-ilerleme, cihaz bilgisi yoktur. Her internet isteğinde olduğu gibi, isteğin
-gittiği sunucu cihazınızın IP adresini görür. Bağlantı denetimi için
-Google'ın genel amaçlı bağlantı ucu kullanılmaktadır; bu uç yanıt gövdesi
-üretmez.</p>
-<p><strong>İnternet olmadan da oynayabilirsiniz.</strong> Bağlantı yoksa oyun
-normal açılır ve bölümler oynanır; yalnızca mağaza ve reklam ödülleri kapalı
-kalır.</p>
+  <div class="kutu">
+    <p>E-posta adresinizi, adınızı, profil fotoğrafınızı, konumunuzu,
+    rehberinizi veya cihaz kimliğinizi (reklam kimliği, IMEI vb.)
+    <strong>toplamıyoruz</strong>.</p>
+  </div>
 
-<h2>4. Üçüncü taraf hizmetler</h2>
-<p>Uygulamada <strong>reklam ağı, analitik veya çökme raporlama kütüphanesi
-bulunmamaktadır.</strong> AdMob, Firebase, Unity Analytics, Sentry ve benzeri
-hiçbir SDK gömülü değildir.</p>
+  <h2>2) Neden topluyoruz</h2>
+  <p>Yalnız iki iş için:</p>
+  <ul>
+    <li>Telefonunuzu değiştirdiğinizde ya da oyunu silip yeniden kurduğunuzda
+        ilerlemenizin geri gelmesi</li>
+    <li>Kabus Modu liderlik tablosunun çalışması</li>
+  </ul>
+  <p>Reklam gösterimi, profil çıkarma veya pazarlama için kullanılmaz.</p>
 
-<h2>5. Çocuklar</h2>
-<p>Uygulama hiç kimseden veri toplamadığı için çocuklardan da veri toplamaz.
-Sohbet, kullanıcı içeriği veya başka oyuncularla etkileşim özelliği yoktur.</p>
+  <h2>3) Kimseyle paylaşmıyoruz</h2>
+  <p>Toplanan bilgiler satılmaz ve üçüncü taraflarla paylaşılmaz. Veriler
+  Cloudflare altyapısında (Doğu Avrupa) saklanır; Cloudflare bizim adımıza
+  işleyen hizmet sağlayıcıdır. Her web isteğinde olduğu gibi IP adresiniz
+  Cloudflare tarafından görülür; biz IP adresi saklamıyoruz.</p>
 
-<h2>6. Haklarınız</h2>
-<p>Hakkınızda tuttuğumuz bir veri olmadığı için silinecek, düzeltilecek veya
-taşınacak bir veri de yoktur. Cihazınızdaki oyun kaydını silmek isterseniz
-uygulamayı kaldırmanız yeterlidir.</p>
+  <h2>4) Güvenlik</h2>
+  <p>Tüm veri aktarımı HTTPS ile şifrelenir.</p>
 
-<h2>7. Değişiklikler</h2>
-<p>İleride uygulamaya satın alma, reklam veya bulut kaydı eklenirse bu metin
-güncellenir ve üstteki tarih değişir. Yeni özellikler yayına girmeden önce
-güncellenmiş metin bu adreste yayımlanır.</p>
+  <h2>5) Verinizi sildirme</h2>
+  <p>Verilerinizin silinmesini istiyorsanız
+  <a class="mail" href="mailto:mamyark.1@gmail.com?subject=Hexwick%20-%20veri%20silme%20talebi">mamyark.1@gmail.com</a>
+  adresine yazın. Talebinizi aldıktan sonra <strong>30 gün içinde</strong>
+  hesabınıza ait tüm kayıtları sileriz. Silme işleminden sonra ilerlemeniz
+  geri getirilemez.</p>
+  <p>Oyundan hesap bağlantısını dilediğiniz zaman kesebilirsiniz
+  (<em>Profil → Bağlantıyı Kes</em>); bu işlem telefonunuzdaki ilerlemeyi
+  silmez.</p>
 
-<h2>8. İletişim</h2>
-<p>Sorularınız için: <a href="mailto:mamyark.1@gmail.com">mamyark.1@gmail.com</a></p>
+  <h2>6) Çocuklar</h2>
+  <p>Oyun 13 yaş altındaki çocuklara yönelik değildir ve onlardan bilerek veri
+  toplamayız.</p>
 
-<hr>
+  <h2>7) Değişiklikler</h2>
+  <p>Bu politika değişirse bu sayfadaki tarih güncellenir.</p>
 
-<h1 id="en">Hexwick — Privacy Policy</h1>
-<p class="tarih">Last updated: 10 August 2026 · App: Hexwick (<code>com.hexwick.game</code>)</p>
+  <h2>8) İletişim</h2>
+  <p><a class="mail" href="mailto:mamyark.1@gmail.com">mamyark.1@gmail.com</a></p>
 
-<div class="kutu">
-  <p class="ozet">In short: Hexwick collects, stores and shares no personal
-  data. No account is required. Your progress stays on your own device.</p>
-</div>
+  <!-- ═══════════════════════════════════════════════════════════ -->
 
-<h2>1. Data we collect</h2>
-<p><strong>None.</strong> The app does not read, store or transmit your name,
-e-mail, phone number, location, contacts, photos, device identifiers,
-advertising ID (GAID/IDFA), camera or microphone. There is no sign-up, no
-login and no text input field anywhere in the app.</p>
+  <section lang="en" id="en">
+    <header>
+      <h1>Privacy Policy — <span class="oyun">Hexwick</span></h1>
+      <p class="tarih">Last updated: 16 August 2026</p>
+    </header>
 
-<h2>2. Stored on your device</h2>
-<p>The game writes your progress to the app's private storage on your device.
-This data <strong>never leaves the device</strong> and is removed when you
-uninstall the app. It contains: level progress and records, in-game currencies
-(gold, stones, energy), inventory, cosmetics, and the sound on/off setting.</p>
+    <p>This page explains what information Hexwick collects, why it is
+    collected, and how you can have it deleted.</p>
 
-<h2>3. Internet access</h2>
-<p>The app requests the <code>INTERNET</code> permission for exactly two
-purposes: (1) checking whether a connection is available, because the shop and
-rewarded ads require one, and (2) checking whether a newer version has been
-released.</p>
-<p><strong>No information about you is sent</strong> in these requests — no
-identifier, no progress, no device data. As with any internet request, the
-receiving server sees your IP address. The connectivity check uses Google's
-general-purpose connectivity endpoint, which returns an empty response.</p>
-<p><strong>The game is playable offline.</strong> Without a connection the game
-starts and plays normally; only the shop and ad rewards are unavailable.</p>
+    <h2>1) What we collect</h2>
 
-<h2>4. Third-party services</h2>
-<p>The app contains <strong>no advertising network, analytics or crash
-reporting library</strong> — no AdMob, Firebase, Unity Analytics, Sentry or
-similar SDK is embedded.</p>
+    <h3>For everyone who opens the game</h3>
+    <ul>
+      <li><strong>Player name</strong> — assigned automatically on first launch
+          (e.g. <code>username0160699284</code>). You may change it. This name
+          appears on the leaderboard.</li>
+      <li><strong>Game progress</strong> — unlocked levels, level records</li>
+      <li><strong>In-game currency and items</strong> — gold, gems, inventory,
+          equipped gear, costumes, chests</li>
+      <li><strong>Game statistics</strong> — monsters and bosses defeated,
+          deaths, rounds played and time played</li>
+      <li><strong>Energy and daily counters</strong></li>
+      <li><strong>Nightmare Mode</strong> run times and the gear equipped during
+          those runs</li>
+      <li><strong>A random token we generate to recognise your device</strong></li>
+    </ul>
 
-<h2>5. Children</h2>
-<p>Because the app collects no data from anyone, it collects no data from
-children. There is no chat, user-generated content or interaction with other
-players.</p>
+    <h3>Only if you tap “Link Account”</h3>
+    <ul>
+      <li><strong>Your Google Play Games player ID</strong></li>
+    </ul>
 
-<h2>6. Your rights</h2>
-<p>As we hold no data about you, there is nothing to delete, correct or export.
-To remove your local game save, uninstall the app.</p>
+    <div class="kutu">
+      <p>We do <strong>not</strong> collect your email address, your name, your
+      profile photo, your location, your contacts, or any device identifier
+      (advertising ID, IMEI, etc.).</p>
+    </div>
 
-<h2>7. Changes</h2>
-<p>If purchases, advertising or cloud saves are added in the future, this
-document will be updated and the date above will change. The updated text will
-be published at this address before those features go live.</p>
+    <h2>2) Why we collect it</h2>
+    <p>For two purposes only:</p>
+    <ul>
+      <li>So your progress returns when you change phones or reinstall the game</li>
+      <li>So the Nightmare Mode leaderboard works</li>
+    </ul>
+    <p>It is not used for advertising, profiling, or marketing.</p>
 
-<h2>8. Contact</h2>
-<p><a href="mailto:mamyark.1@gmail.com">mamyark.1@gmail.com</a></p>
+    <h2>3) We do not share it</h2>
+    <p>The information collected is never sold or shared with third parties.
+    Data is stored on Cloudflare infrastructure (Eastern Europe); Cloudflare
+    acts as a service provider processing data on our behalf. As with any web
+    request, your IP address is visible to Cloudflare; we do not store IP
+    addresses.</p>
 
+    <h2>4) Security</h2>
+    <p>All data transmission is encrypted using HTTPS.</p>
+
+    <h2>5) Deleting your data</h2>
+    <p>To request deletion of your data, write to
+    <a class="mail" href="mailto:mamyark.1@gmail.com?subject=Hexwick%20-%20data%20deletion%20request">mamyark.1@gmail.com</a>.
+    We will delete all records associated with your account
+    <strong>within 30 days</strong> of receiving your request. Progress cannot
+    be recovered after deletion.</p>
+    <p>You may unlink your account at any time
+    (<em>Profile → Unlink</em>); this does not delete the progress stored on
+    your phone.</p>
+
+    <h2>6) Children</h2>
+    <p>The game is not directed at children under 13, and we do not knowingly
+    collect data from them.</p>
+
+    <h2>7) Changes</h2>
+    <p>If this policy changes, the date on this page will be updated.</p>
+
+    <h2>8) Contact</h2>
+    <p><a class="mail" href="mailto:mamyark.1@gmail.com">mamyark.1@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Hexwick · Gizlilik Politikası / Privacy Policy · 16.08.2026
+  </footer>
+
+</main>
 </body>
 </html>
